@@ -1,4 +1,4 @@
-package com.example.accessingdatajpa;
+package com.rbs.test;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

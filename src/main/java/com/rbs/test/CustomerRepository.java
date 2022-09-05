@@ -1,4 +1,4 @@
-package com.example.accessingdatajpa;
+package com.rbs.test;
 
 import java.util.List;
 
