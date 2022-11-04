@@ -34,9 +34,10 @@ public class StudentController
     @RateLimiter(name = "getAllStudent", fallbackMethod = "getAllStudentFallBack")
     public ResponseEntity<List<Student>> getAllStudent()
     {
-        System.out.println("Service called::::");
-        MarketData marketData =container.listOfMktData.pop();
-        System.out.println(container.listOfMktData.size());
+        MarketData marketData =container.takeOut();
+        marketData.process();
+        System.out.println(Thread.currentThread().getName()+":::"+marketData.index);
+        container.takeIn(marketData);
         List<Student> asli=studentService.getAllStudent();
         return ResponseEntity.ok().body(asli);
     }

@@ -14,7 +14,7 @@ public class JobExecutor {
     @Autowired
     Container container;
 
-    @Scheduled(fixedDelay = 1000)
+   // @Scheduled(fixedDelay = 1000)
     public void scheduleFixedDelayTask() {
         while (container.listOfMktData.size()<=20){
             MarketData marketData=new MarketData();
